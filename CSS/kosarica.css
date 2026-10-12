@@ -1,0 +1,56 @@
+.cart-panel {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 450px;
+  height: 100vh;
+  background: black;
+  color: white;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+}
+
+.cart-panel h3 {
+  font-size: 25px;
+  padding-left: 25px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid white;
+}
+.button-holder-kosarica{
+  margin-top: 10%;
+}
+
+.button-holder-kosarica button {
+  width: 350px;
+  height: 35px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  margin: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.button-holder-kosarica button:hover{
+  background-color: orange;
+  cursor: pointer;
+}
+
+.cart-panel.active {
+  transform: translateX(0);
+}
+
+.close-cart {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  font-size: 40px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.close-cart:hover {
+  color: orange;
+}

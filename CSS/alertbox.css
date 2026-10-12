@@ -1,0 +1,105 @@
+/* ================================
+   GLOBAL ALERT MODE (BLUR SVEGA)
+   ================================ */
+
+.alert-mode body>*:not(#alert-root) {
+  filter: blur(6px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ================================
+   ALERT ROOT (OVERLAY)
+   ================================ */
+
+#alert-root {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 99999;
+}
+
+/* Aktivacija alerta */
+.alert-mode #alert-root {
+  display: flex;
+}
+
+/* ================================
+   ALERT BOX
+   ================================ */
+
+.alert-box {
+  width: 500px;
+  height: 500px;
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  animation: alertPop 0.25s ease-out;
+}
+
+/* Gornji dio */
+.alert-top {
+  height: 200px;
+  background: linear-gradient(135deg, #000000, #000000);
+  padding: 24px 0;
+}
+
+/* Ikona */
+.checkmark {
+  font-size: 40px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Sadržaj */
+.alert-content {
+  padding: 24px 20px 28px;
+}
+
+.alert-content h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.alert-content p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Dugme */
+.alert-content button {
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  background: black;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.alert-content button:hover {
+  background: #27ae60;
+}
+
+/* ================================
+   ANIMACIJA
+   ================================ */
+
+@keyframes alertPop {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

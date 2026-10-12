@@ -1,0 +1,260 @@
+/* ==================== TOP5 NASLOV ==================== */
+
+.top5-container {
+  padding: 60px 24px 0;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.top5-container h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 800;
+  color: black;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+
+.top5-container p {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 32px;
+  letter-spacing: 0.02em;
+}
+
+/* ==================== TOP 5 NAJPRODAVANIJIH ==================== */
+
+#top5 {
+  max-width: 860px;
+  margin: 40px auto;
+  padding: 0 24px;
+  font-family: 'DM Sans', sans-serif;
+}
+
+#top5 .t5-section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+#top5 .t5-section-title {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #1a1a1a;
+  margin-bottom: 40px;
+}
+
+#top5 .t5-section-title span {
+  color: #ffffff;
+  background: #1a1a1a;
+  padding: 2px 12px;
+  border-radius: 4px;
+}
+
+/* ---- Redovi ---- */
+
+#top5 .t5-product-row {
+  display: grid;
+  grid-template-columns: 64px 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 20px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  position: relative;
+  cursor: default;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  animation: t5FadeUp 0.5s ease both;
+}
+
+#top5 .t5-product-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* prvi proizvod — istaknut tamnom pozadinom */
+#top5 .t5-product-row.t5-first {
+  background: #1a1a1a;
+  border-color: #1a1a1a;
+}
+
+/* ---- Rank broj ---- */
+
+#top5 .t5-rank {
+  text-align: center;
+}
+
+#top5 .t5-rank-num {
+  display: block;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1;
+  color: #d4d4d4;
+  transition: color 0.2s;
+}
+
+#top5 .t5-product-row:hover .t5-rank-num {
+  color: #1a1a1a;
+}
+
+#top5 .t5-product-row.t5-first .t5-rank-num {
+  font-size: 38px;
+  color: #ffffff;
+}
+
+/* ---- Naziv i tagovi ---- */
+
+#top5 .t5-product-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+#top5 .t5-product-row.t5-first .t5-product-name {
+  color: #ffffff;
+}
+
+#top5 .t5-product-meta {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#top5 .t5-tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid #e0e0e0;
+  color: #666;
+  background: #f5f5f5;
+  letter-spacing: 0.02em;
+}
+
+#top5 .t5-product-row.t5-first .t5-tag {
+  background: #2e2e2e;
+  border-color: #3a3a3a;
+  color: #aaa;
+}
+
+#top5 .t5-badge-first {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  background: #ffffff;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+/* ---- Stats desno ---- */
+
+#top5 .t5-product-stats {
+  text-align: right;
+  flex-shrink: 0;
+  min-width: 100px;
+}
+
+#top5 .t5-sold-count {
+  font-size: 24px;
+  font-weight: 800;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+#top5 .t5-product-row.t5-first .t5-sold-count {
+  color: #ffffff;
+}
+
+#top5 .t5-sold-label {
+  font-size: 11px;
+  color: #999;
+  margin-top: 2px;
+  letter-spacing: 0.05em;
+}
+
+#top5 .t5-product-row.t5-first .t5-sold-label {
+  color: #666;
+}
+
+#top5 .t5-revenue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-top: 6px;
+}
+
+#top5 .t5-product-row.t5-first .t5-revenue {
+  color: #ffffff;
+}
+
+#top5 .t5-bar-wrap {
+  margin-top: 6px;
+  height: 3px;
+  background: #ebebeb;
+  border-radius: 3px;
+  width: 80px;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+#top5 .t5-product-row.t5-first .t5-bar-wrap {
+  background: #333;
+}
+
+#top5 .t5-bar-fill {
+  height: 100%;
+  background: #1a1a1a;
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#top5 .t5-product-row.t5-first .t5-bar-fill {
+  background: #ffffff;
+}
+
+/* ---- Animacija ---- */
+
+@keyframes t5FadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#top5 .t5-product-row:nth-child(3) {
+  animation-delay: 0.05s;
+}
+
+#top5 .t5-product-row:nth-child(4) {
+  animation-delay: 0.12s;
+}
+
+#top5 .t5-product-row:nth-child(5) {
+  animation-delay: 0.19s;
+}
+
+#top5 .t5-product-row:nth-child(6) {
+  animation-delay: 0.26s;
+}
+
+#top5 .t5-product-row:nth-child(7) {
+  animation-delay: 0.33s;
+}

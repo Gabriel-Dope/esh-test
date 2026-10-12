@@ -1,0 +1,43 @@
+body.info-page {
+    box-sizing: border-box;
+    margin: 0;
+    background-image: url("pozadina\ inf.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body.info-page .tekstHolder {
+    color: white;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 10%;
+    background-color: rgba(0, 0, 0, 0.671);
+    padding: 10px;
+    border-radius: 30px;
+    margin-bottom: 5%;
+}
+
+body.info-page .tekstHolder p {
+    padding: 0;
+    margin: 0;
+    font-size: larger;
+    letter-spacing: 4px;
+}
+
+body.info-page h1 {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right,#FF5E0E, #FF8C00, #FF6347, #F5761A, #ED9121);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate-gardient 2.5s linear infinite;
+}
+
+@keyframes animate-gardient {
+    to {
+        background-position: 200%;
+    }
+}

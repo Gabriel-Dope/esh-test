@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Essential Suplement Hub </title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/kosarica.css">
+    <link rel="stylesheet" href="/CSS/velikaKosarica.css">
+    <link rel="stylesheet" href="/CSS/forme.css">
+    <link rel="stylesheet" href="/CSS/opis.css">
+    <link rel="stylesheet" href="/CSS/detalji.css">
+    <link rel="stylesheet" href="/CSS/alertbox.css">
+    <link rel="stylesheet" href="/CSS/generisaniHolder.css">
+    <link rel="stylesheet" href="/CSS/najprodavanije.css">
+    <link rel="icon" href="favicon-16x16.png">
+</head>
+
+<body>
+    <div class="traka">
+        <img class="Logo" src="logo.png" onclick="ucitajPocetnu()">
+        <div class="podTraka">
+            <li><a href="#" onclick="event.preventDefault(); generisiGroupedProizvode()">proizvodi</a></li>
+            <li><a href="">popust</a></li>
+            <li><a href="">kontakt</a></li>
+            <li><a href="">protein kalkulator</a></li>
+            <li><a href="">ponude</a></li>
+        </div>
+        <div class="kosaricaKontejner">
+            <img class="kosarica" src="shopping-cart.png" alt="">
+            <span class="brojacProizvoda" id="cart-count">0</span>
+        </div>
+
+        <div class="trazilica">
+            <input class="unos" type="search" name="search" placeholder="    Pretrazi sve sto te zanima !">
+            <img class="traziSl" src="find.png">
+
+        </div>
+    </div>
+    <div id="content">
+        <div class="strelice">Uvijek s vama 2025 Essential Suplement Hub (ESH)</div>
+        <div class="slideshow-container">
+            <div class="slide"><img src="/SLIKE/sw1.png" alt="1"></div>
+            <div class="slide"><img src="popravni.png" alt="2"></div>
+            <div class="slide"><img src="treca.jpeg" alt="3"></div>
+        </div>
+
+        <div class="dots">
+            <span class="dot" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+            <span class="dot" onclick="goToSlide(2)"></span>
+        </div>
+        <div class="teller">
+            <div class="ponudeNaslov">
+                <h1>ESH</h1>
+                <h2>PONUDE</h2>
+            </div>
+            <div id="ponudeKontejner" class="ponudeKontejner"></div>
+        </div>
+        <div class="promo">
+            <img src="/SLIKE/img1,2.png" alt="">
+            <img src="/SLIKE/img4.png" alt="">
+            <div class="btnvraper">
+                <button>Započni odmah!</button>
+            </div>
+        </div>
+        <div class="top5-container">
+            <h2>Najprodavanije</h2>
+            <p>Ovdje su proizvodi koji se najvise prodaju</p>
+            <div id="top5"></div>
+        </div>
+    </div>
+    <div class="kraj">
+
+        <div class="slikeHolder">
+            <img class="p1" src="phone.png" alt="">
+            <img class="e1" src="email.png" alt="">
+            <img class="i1" src="instagram.png" alt="">
+            <img class="s1" src="clock.png" alt="">
+        </div>
+        <div class="informacijeHolder">
+            <div class="broj">
+                <p>+387-63-444-666</p>
+            </div>
+            <div class="adresaM">
+                <p><a href="">info@esh.ba</a></p>
+            </div>
+            <div class="instagram" onclick="">
+                <p><a href="https://www.instagram.com/essentialsuplementhub/">Naš instagram</a></p>
+            </div>
+            <div class="vrijeme">
+                <p>Pon - Pet : 00.00-00.00</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <p>Copyright © 2025 Essential Suplement Hub (ESH). Sva prava su zadržana! </p>
+    </div>
+    <div class="cart-panel ">
+        <span class="close-cart">&times;</span>
+        <h3>Tvoja košarica 🛒</h3>
+        <h4>Broj proizvoda :</h4>
+        <ul id="cart-items"></ul>
+        <h4>Ukpuno za platiti :</h4>
+        <div class="button-holder-kosarica">
+            <button onclick="ucitajFormu()">Kupi</button>
+            <button onclick="ucitajKosaricu()">Pređi u košaricu</button>
+        </div>
+    </div>
+    <div id="alert-root"></div>
+    <script src="/JS/kosarica.js"></script>
+    <script src="/JS/script.js"></script>
+    <script src="/JS/alertbox.js"></script>
+    <script src="/JS/ponudeScr.js"></script>
+    <script src="/JS/forma.js"></script>
+    <script src="/JS/detaljno.js"></script>
+    <script src="/JS/miniKosarica.js"></script>
+    <script src="/JS/grupiraniProizvodi.js"></script>
+    <script src="/JS/najprodavanije.js"></script>
+</body>
+
+</html>

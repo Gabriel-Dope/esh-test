@@ -1,0 +1,868 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.strelice {
+    background-color: black;
+    margin-top: 10px;
+    height: 40px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.slideshow-container {
+    position: relative;
+    height: 700px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center;
+}
+
+.dots {
+    text-align: center;
+    background-color: black;
+}
+
+.dot {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: #555;
+}
+.kosaricaKontejner{
+    position: fixed;
+    bottom: 110px;
+    right: 200px;
+}
+.kosarica{
+    width: 70px;
+    position: relative;
+    border: 2px solid orange;
+    border-radius: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.kosarica:hover{
+    cursor: pointer;
+}
+.brojacProizvoda{
+    background-color: orange;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.traka {
+    background-color: black;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.Logo {
+    width: 15%;
+    height: 50px;
+    display: block;
+    margin-left: 10px;
+}
+
+.Logo:hover {
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.podTraka li {
+    list-style: none;
+    cursor: pointer;
+    display: inline;
+    margin-left: 75px;
+
+}
+
+a {
+    list-style-type: none;
+    font-size: medium;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.unos {
+    width: 500px;
+    height: 40px;
+    margin-top: 13px;
+    padding: 0;
+    border-radius: 30px 30px 30px 30px;
+
+}
+
+.traziSl {
+    width: 23px;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+}
+
+.traziSl:hover {
+    cursor: pointer;
+}
+
+.trazilica {
+    display: inline;
+    margin-bottom: 12px;
+    position: relative;
+    margin-left: 150px;
+}
+/* ======== PONUDA ======== */
+
+.ponudeNaslov{
+    background-color: black;
+    color: white;
+    display: flex;
+}
+.ponudeKontejner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.ponuda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 20px;
+    background: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.ponuda:hover {
+    border-color: #000;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-3px);
+}
+
+.ponudaSadrzaj {
+    display: contents;
+}
+
+.ponudaSadrzaj h2 {
+    order: 1;
+    margin: 0 0 15px;
+    color: #111;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.ponuda img {
+    order: 2;
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.ponudaSadrzaj p {
+    order: 3;
+    margin: 0 0 20px;
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+.ponudaSadrzaj button {
+    order: 4;
+    padding: 11px 25px;
+    background: #111;
+    color: white;
+    border: 1px solid #111;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.ponudaSadrzaj button:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* HOVER EFEKT */
+.kon1:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px black;
+}
+
+/* NASLOV */
+.kon1 h1{
+    font-size: 28px;
+    margin-bottom: 15px;
+    color:black;
+}
+
+/* SLIKA */
+.kon1 img{
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+/* CIJENA */
+.kon1 p:first-of-type{
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff7b00;
+    margin: 10px 0;
+}
+
+/* OPIS */
+.kon1 p:last-of-type{
+    font-size: 15px;
+    color: #cfcfcf;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.dodajukosaricu{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #000000, #383128);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* HOVER BUTTON */
+.dodajukosaricu:hover{
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #ff7b00, #ffae00);
+}
+.promo{
+    display: flex;
+    position: relative;
+}
+.promo img{
+    width: 50%;
+}
+.btnvraper{
+    position: absolute;
+    top: 77%;
+    left: 53%;
+}
+.btnvraper button{
+    background-color: rgb(11, 127, 219);
+    color: white;
+    width: 200px;
+    height: 60px;
+    font-size: larger;
+    padding: 3%;
+    border: 0;
+    border-radius: 50px 50px 50px 50px;
+}
+
+.marketing{
+    display: flex;
+    color: black;
+    justify-content: center;
+}
+.protein img{
+    width: 635px;
+}
+.creatin img{
+    width: 635px;
+
+}
+.vitamini img{
+    width: 635px;
+}
+
+.SrednjiDiv h1{
+    color: black;
+    border-bottom: 5px solid black;
+    width: 20% ;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 15px;
+}
+
+.proizvodHolder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+
+.produkti img {
+    width: 250px;
+    padding: 10px;
+    margin-top: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.produkti button {
+    width: 200px;
+    height: 40px;
+    color: white;
+    background-color: black;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    display: block;
+}
+
+.holderB {
+    text-align: center;
+    padding: 25px;
+}
+
+.holderB button {
+    color: white;
+    background-color: orangered;
+    border: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+.kartice{
+    color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+}
+.kartice div{
+    display: flex;
+    background-color: #e7e4e4;
+    align-items: center;
+    padding: 3%;
+    border-radius: 25px 25px 25px 25px;
+    height: 225px;
+}
+.kartice img{
+    width: 70px;
+
+}
+.kraj{
+    padding: 5%;
+    background-color: black;
+}
+
+
+/* ===== IKONE ===== */
+.slikeHolder {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    max-width: 1200px;
+    margin: 0 auto 20px auto;
+}
+
+.slikeHolder img {
+    width: 50px;
+}
+
+/* UKLANJAMO absolute */
+.p1, .e1, .i1, .s1 {
+    position: static;
+}
+
+/* ===== TEKST ISPOD IKONA ===== */
+.informacijeHolder {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 150;
+
+    max-width: 1200px;;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.informacijeHolder div {
+    width: 100%;
+}
+
+/* linije između */
+.broj,
+.adresaM,
+.instagram {
+    border-right: 1px solid #444;
+}
+
+/* makni liniju zadnjem */
+.informacijeHolder div:last-child {
+    border-right: none;
+}
+
+/* tekst */
+.informacijeHolder p {
+    color: white;
+    padding: 10px 0;
+}
+.footer {
+    background-color: black;
+    border-top: 1px solid white;
+}
+
+.footer p {
+    color: orange;
+    margin: 0;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 20px;
+
+}
+
+
+#cart-items{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mini-item{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+}
+
+.mini-cart-img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.mini-info{
+    flex: 1;
+}
+
+.mini-title{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
+}
+
+.mini-variant{
+    font-size: 13px;
+    color: #bbb;
+    margin-top: 5px;
+}
+
+.mini-price{
+    margin-top: 5px;
+    color: orange;
+    font-weight: bold;
+}
+
+.remove-item{
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* =========================================
+   STRANICA - SVI PROIZVODI
+========================================= */
+
+.produkti-stranica {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 40px 80px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.proizvodi-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 35px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.proizvodi-naslov h2 {
+    margin: 0 0 8px;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #111;
+}
+
+.proizvodi-naslov p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SORTIRAJ
+========================================= */
+
+.sortiraj-btn {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    min-width: 140px;
+    transition: 0.2s ease;
+}
+
+.sortiraj-btn span {
+    margin-left: 10px;
+    font-size: 10px;
+}
+
+.sortiraj-btn:hover {
+    background: #333;
+}
+
+
+/* =========================================
+   GLAVNI SADRŽAJ
+========================================= */
+
+.proizvodi-sadrzaj {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* =========================================
+   FILTERI
+========================================= */
+
+.filteri {
+    border: 1px solid #dedede;
+    padding: 22px;
+    background: #fff;
+}
+
+.filteri-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 18px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.filteri-header h3 {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.obrisi-filtere {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 10px;
+    color: #777;
+    cursor: pointer;
+}
+
+.obrisi-filtere:hover {
+    color: #111;
+}
+
+
+/* =========================================
+   GRUPE FILTERA
+========================================= */
+
+.filter-grupa {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.filter-grupa:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.filter-grupa h4 {
+    margin: 0 0 15px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #555;
+}
+
+.filter-grupa label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 11px;
+    font-size: 13px;
+    color: #333;
+    cursor: pointer;
+}
+
+.filter-grupa input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+    accent-color: #111;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   GRID PROIZVODA
+========================================= */
+
+.proizvodi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* =========================================
+   KARTICA PROIZVODA
+========================================= */
+
+.produkti {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.produkti:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   SLIKA
+========================================= */
+
+.whey1 {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: contain;
+    background: #f7f7f7;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.produkti:hover .whey1 {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   INFORMACIJE O PROIZVODU
+========================================= */
+
+.text-kontejner {
+    padding: 18px;
+    background: #fff;
+}
+
+.proizvod-naziv {
+    margin: 0 0 5px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    line-height: 1.3;
+}
+
+.proizvod-gramaza {
+    margin: 0 0 15px;
+    font-size: 12px;
+    color: #777;
+}
+
+
+/* =========================================
+   OKUS
+========================================= */
+
+.okus-select {
+    width: 100%;
+    height: 38px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    border: 1px solid #d7d7d7;
+    background: white;
+    color: #222;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+}
+
+.okus-select:focus {
+    border-color: #111;
+}
+
+
+/* =========================================
+   CIJENA
+========================================= */
+
+.proizvod-cijena {
+    margin: 0 0 15px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #111;
+}
+
+
+/* =========================================
+   DODAJ U KOŠARICU
+========================================= */
+
+.dodajukosaricu {
+    width: 100%;
+    height: 42px;
+    background: #111;
+    color: white;
+    border: 1px solid #111;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.dodajukosaricu:hover {
+    background: white;
+    color: #111;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .proizvodi-sadrzaj {
+        grid-template-columns: 190px 1fr;
+        gap: 25px;
+    }
+
+    .proizvodi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .whey1 {
+        height: 250px;
+    }
+
+}
+
+
+/* =========================================
+   MOBITEL
+========================================= */
+
+@media (max-width: 700px) {
+
+    .produkti-stranica {
+        padding: 30px 15px 60px;
+    }
+
+    .proizvodi-header {
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .proizvodi-naslov h2 {
+        font-size: 24px;
+    }
+
+    .proizvodi-sadrzaj {
+        display: block;
+    }
+
+    .filteri {
+        margin-bottom: 25px;
+    }
+
+    .proizvodi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .whey1 {
+        height: 190px;
+    }
+
+    .text-kontejner {
+        padding: 12px;
+    }
+
+    .proizvod-naziv {
+        font-size: 14px;
+    }
+
+    .proizvod-cijena {
+        font-size: 16px;
+    }
+
+}

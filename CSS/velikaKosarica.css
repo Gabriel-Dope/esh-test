@@ -1,0 +1,79 @@
+.glavniOkvir{
+    display: flex;
+    color: white;
+    background-color: black;
+}
+.tekstKosarica{
+    border: 1px solid white;
+    width: 20%;
+}
+.kosaricaOkvir{
+    width: 60%;
+    background-color: black;
+}
+.kosaricaOkvir button{
+    width: 150px;
+    height: 30px;
+    border:2px solid orange;
+    background-color: black;
+    font-size: 17px;
+}
+.naslovKosarice{
+    padding: 10px;
+    padding-left: 35px;
+    border-bottom: 2px solid white;
+}
+.naslovKosarice h1{
+    margin: 0;
+}
+#a2{
+    margin-left: 135px;
+}
+#a3{
+    margin-left: 150px;
+}
+#a4{
+    margin-left: 135px;
+}
+.sadrzajKosarice{
+    margin-top: 2%;
+    border: 1px dashed white;
+    margin-bottom: 25px;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+}
+.slikeProizvodaKosarice{
+    width: 14%;
+
+}
+.slikeProizvodaKosarice img{
+    width: 100px;
+    margin-left: 10px;
+}
+.opisKosariceProizvoda{
+    font-size: 21px;
+    text-align: center;
+    padding-top: 20px;
+    
+}
+.opisKosariceProizvoda a{
+    margin-left: 70px;
+}
+.podatciIzBaze{
+    font-size: 16px;
+}
+.podatciIzBaze select{
+    margin-left: 140px;
+}
+.podatciIzBaze button{
+    width: 25px;
+    border: 0;
+    cursor: pointer;
+}
+.tipkePredkupnju{
+    border: 1px solid white;
+    width: 20%;
+
+}
