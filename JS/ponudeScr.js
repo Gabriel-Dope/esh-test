@@ -1,6 +1,6 @@
 function ucitajPonude() {
 
-    fetch("https://esh-beckend.onrender.com")
+    fetch("https://esh-beckend.onrender.com/ponude")
 
         .then(res => res.json())
 
