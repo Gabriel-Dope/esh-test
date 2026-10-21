@@ -15,10 +15,10 @@ function ucitajOpis(id, push = true) {
     }
 
     console.log("FETCHA:",
-        `http://localhost:3000/products/${id}`
+        `https://esh-beckend.onrender.com${id}`
     );
 
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`https://esh-beckend.onrender.com${id}`)
         .then(res => {
 
             console.log("STATUS:", res.status);
@@ -31,7 +31,7 @@ function ucitajOpis(id, push = true) {
 
         });
 
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`https://esh-beckend.onrender.com${id}`)
         .then(res => res.json())
         .then(data => {
 
@@ -120,7 +120,7 @@ function eshDodajUKosaricuIzDetalja(id) {
 }
 
 function promijeniOkus(okus, id) {
-    fetch(`http://localhost:3000/products/${id}`)
+    fetch(`https://esh-beckend.onrender.com${id}`)
         .then(res => res.json())
         .then(data => {
 
