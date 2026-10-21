@@ -15,7 +15,7 @@ function generisiGroupedProizvode(push = true) {
 
     const holder = document.getElementById("generisaniHolder");
 
-    fetch("http://localhost:3000/products")
+    fetch("https://esh-beckend.onrender.com")
         .then(res => res.json())
         .then(data => {
 
