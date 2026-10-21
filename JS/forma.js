@@ -245,7 +245,7 @@ async function ZavrsiKupnju() {
     };
 
     try {
-    const res = await fetch("http://localhost:3000/order", {
+    const res = await fetch("https://esh-beckend.onrender.com", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
