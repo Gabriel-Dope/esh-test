@@ -1,6 +1,6 @@
 function ucitajPonude() {
 
-    fetch("http://localhost:3000/ponude")
+    fetch("https://esh-beckend.onrender.com")
 
         .then(res => res.json())
 
@@ -17,7 +17,7 @@ function ucitajPonude() {
                 div.classList.add("ponuda");
 
                 div.innerHTML = `
-                    <img src="http://localhost:3000${ponuda.slika}" alt="${ponuda.naziv}">
+                    <img src="https://esh-beckend.onrender.com${ponuda.slika}" alt="${ponuda.naziv}">
 
                     <div class="ponudaSadrzaj">
 
