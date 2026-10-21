@@ -2,7 +2,7 @@ function ucitajNajprodavanije() {
  
     const top5 = document.getElementById('top5');
  
-    fetch('https://esh-beckend.onrender.com')
+    fetch('https://esh-beckend.onrender.com/najprodavaniji')
         .then(res => res.json())
         .then(data => {
  
