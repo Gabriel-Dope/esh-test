@@ -2,7 +2,7 @@ function ucitajNajprodavanije() {
  
     const top5 = document.getElementById('top5');
  
-    fetch('http://localhost:3000/najprodavaniji')
+    fetch('https://esh-beckend.onrender.com')
         .then(res => res.json())
         .then(data => {
  
